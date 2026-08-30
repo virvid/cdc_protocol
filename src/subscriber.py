@@ -28,7 +28,7 @@ def start_subscriber():
         print("=" * 50)
         print(f"\n[SUBSCRIBER] Waiting for real-time events on '{table_name}'...\n")
         
-        client_id = str(uuid.uuid4())[:6] # random number
+        client_id = str(uuid.uuid4())[:6] # random 6
         file_path = f"data_lake/{table_name}_{client_id}_cdc.jsonl"
 
         with open(file_path, "a", encoding="utf-8") as f:
